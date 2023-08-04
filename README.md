@@ -1,24 +1,38 @@
-# README
+# RubyPod
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rubypod is a simple Rails application that shows you a list of your favorite Ruby and Rails podcasts on Spotify.
 
-Things you may want to cover:
+It has ElasticSearch integration and uses Searchkick to provide a search functionality.
 
-* Ruby version
+## Getting Started
 
-* System dependencies
+To get started, clone the repository and install the gems:
 
-* Configuration
+```
+$ git clone https://github.com/Benmuiruri/ruby-pod.git
+$ cd rubypod
+$ bundle install
+```
 
-* Database creation
+Then, create the database and run the migrations:
 
-* Database initialization
+```
+$ rails db:create
+$ rails db:migrate
+```
 
-* How to run the test suite
+Next, add the Spotify API keys to your environment variables:
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+$ SPOTIFY_CLIENT_ID=your_client_id
+$ SPOTIFY_CLIENT_SECRET=your_client_secret
+```
 
-* Deployment instructions
+Next, add the name and Spotify IDs of your favorite podcasts to the podcasts.yml file in the root folder. The ID is the last part of the Spotify URL for the podcast.
 
-* ...
+
+Finally, run the server:
+
+```
+$ rails s
+```
