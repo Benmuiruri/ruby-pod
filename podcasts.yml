@@ -1,0 +1,5 @@
+- name: "The Ruby on Rails Podcast"
+  spotify_url: "https://api.spotify.com/v1/shows/5CnDmMUG0S5O4uJStqLbOm"
+
+- name: "Ruby for All"
+  spotify_url: "https://api.spotify.com/v1/shows/4RS3Z3ImDZLlrk9cV6pBn8"
