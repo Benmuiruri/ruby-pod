@@ -1,5 +1,5 @@
 - name: "The Ruby on Rails Podcast"
-  spotify_url: "https://api.spotify.com/v1/shows/2Iibd5A6R7mxkCm4NwNmUn"
+  spotify_id: "2Iibd5A6R7mxkCm4NwNmUn"
 
 - name: "Remote Ruby"
-  spotify_url: "https://api.spotify.com/v1/shows/23ZxPAyiZx2rTJ4NjYycLN"
+  spotify_id: "23ZxPAyiZx2rTJ4NjYycLN"

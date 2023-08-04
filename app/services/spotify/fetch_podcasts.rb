@@ -9,9 +9,7 @@ module Spotify
     end
 
     def call
-      spotify_id = @podcast.spotify_url.split('/').last
-      response = get("/shows/#{spotify_id}/episodes")
-      binding.pry
+      response = get("/shows/#{@podcast.spotify_id}/episodes")
       if response['error'].nil?
         Operation::Success.new(data: response)
       else
