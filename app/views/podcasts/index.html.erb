@@ -1,0 +1,6 @@
+<div class="text-center">
+  <h1>Welcome to RubyPod</h1>
+</div>
+<h2>A central hub to see the latest episodes from your fav Ruby and Ruby on Rails podcasts on Spotify</h2>
+<%= button_to 'Fetch Episodes', fetch_episodes_podcasts_path, method: :post %>
+<%= render @podcasts %>

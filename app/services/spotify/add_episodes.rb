@@ -9,7 +9,7 @@ module Spotify
 
     def call
       @episodes.each do |episode|
-        @podcast.episodes.create(
+        @podcast.episodes.find_or_create_by(
           title: episode['name'],
           description: episode['description'],
           release_date: episode['release_date'],

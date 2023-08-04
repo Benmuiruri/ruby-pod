@@ -1,8 +1,11 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  root "podcasts#index"
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  resources :podcasts do
+    collection do
+      post :fetch_episodes
+    end
+  end
 end
