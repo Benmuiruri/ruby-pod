@@ -5,6 +5,6 @@
     <h2><%= episode.title %></h2>
     <p><%= truncate(episode.description, length: 100) %></p>
     <p><%= episode.release_date %></p>
-    <p><%= link_to "Listen on Spotify", episode.spotify_url %></p>
+    <%= link_to "Listen on Spotify", episode.spotify_url, class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" %>
   </div>
 <% end %>
