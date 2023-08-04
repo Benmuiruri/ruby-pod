@@ -12,6 +12,7 @@ module Spotify
     def call
       response = get("/shows/#{@podcast.spotify_id}/episodes")
       if response['error'].nil?
+        Spotify::AddEpisodes.call(@podcast, response['items'])
         Operation::Success.new(data: response)
       else
         Operation::Failure.new(errors: response['error']['message'])
