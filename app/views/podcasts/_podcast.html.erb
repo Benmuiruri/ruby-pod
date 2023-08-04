@@ -6,6 +6,7 @@
     <p><%= truncate(latest_episode.description, length: 100) %></p>
     <p><%= latest_episode.release_date %></p>
     <p><%= link_to "Listen on Spotify", latest_episode.spotify_url %></p>
+    <p><%= link_to "View all episodes", podcast_episodes_path(podcast) %></p>
   <% else %>
     <p>No episodes available.</p>
   <% end %>
