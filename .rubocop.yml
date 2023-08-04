@@ -1,0 +1,23 @@
+AllCops:
+  SuggestExtensions: false
+  NewCops: enable
+  Exclude:
+    - 'bin/**/*'
+    - 'config/**/*'
+    - 'db/**/*'
+    - 'lib/tasks/**/*'
+    - 'tmp/**/*'
+    - 'vendor/bundle/**/*'
+
+Lint/MissingSuper:
+  Exclude:
+    - 'app/components/**/*'
+    - 'app/listeners/**/*'
+    - 'app/services/**/*'
+    
+Style/Documentation:
+  Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
