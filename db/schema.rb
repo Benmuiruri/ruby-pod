@@ -10,9 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_04_122009) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_04_123312) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "episodes", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.date "release_date"
+    t.string "spotify_url"
+    t.bigint "podcast_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["podcast_id"], name: "index_episodes_on_podcast_id"
+  end
 
   create_table "podcasts", force: :cascade do |t|
     t.string "name"
@@ -21,4 +32,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_04_122009) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "episodes", "podcasts"
 end

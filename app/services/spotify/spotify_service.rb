@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class SpotifyService < BaseService
-  def initialize(podcast )
+  def initialize(podcast)
     @podcast = podcast
   end
 

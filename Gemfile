@@ -9,13 +9,13 @@ gem 'rails', '~> 7.0.6'
 
 gem 'bootsnap', require: false
 gem 'elasticsearch', '~> 7.17.7'
-gem 'rest-client'
 gem 'hotwire-rails'
 gem 'importmap-rails'
 gem 'jbuilder'
 gem 'pg', '~> 1.1'
 gem 'puma', '~> 5.0'
 gem 'redis', '~> 4.0'
+gem 'rest-client'
 gem 'rubocop', require: false
 gem 'searchkick'
 gem 'sprockets-rails'
@@ -26,8 +26,8 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
-  gem 'rspec-rails'
   gem 'dotenv-rails'
+  gem 'rspec-rails'
 end
 
 group :development do
