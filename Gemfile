@@ -8,6 +8,7 @@ ruby '3.2.0'
 gem 'rails', '~> 7.0.6'
 
 gem 'bootsnap', require: false
+gem 'draper'
 gem 'elasticsearch', '~> 7.17.7'
 gem 'hotwire-rails'
 gem 'importmap-rails'
