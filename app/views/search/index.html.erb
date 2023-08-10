@@ -1,0 +1,19 @@
+<h1>Search Results</h1>
+
+<% if @podcasts.present? %>
+  <h2>Podcasts</h2>
+  <% @podcasts.each do |podcast| %>
+    <div>
+      <%= link_to podcast.name, podcast %>
+    </div>
+  <% end %>
+<% end %>
+
+<% if @episodes.present? %>
+  <h2>Episodes</h2>
+  <% @episodes.each do |episode| %>
+    <div>
+      <%= link_to episode.title, podcast_episode_path(episode.podcast, episode) %>
+    </div>
+  <% end %>
+<% end %>
