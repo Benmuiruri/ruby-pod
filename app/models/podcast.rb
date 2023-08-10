@@ -11,6 +11,7 @@
 #  spotify_id :string
 #
 class Podcast < ApplicationRecord
+  searchkick
   has_many :episodes, dependent: :destroy
 
   def latest_episode

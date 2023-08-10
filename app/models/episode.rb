@@ -22,5 +22,6 @@
 #  fk_rails_...  (podcast_id => podcasts.id)
 #
 class Episode < ApplicationRecord
+  searchkick
   belongs_to :podcast
 end
