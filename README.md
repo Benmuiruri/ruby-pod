@@ -21,6 +21,12 @@ $ rails db:create
 $ rails db:migrate
 ```
 
+Next, start ElasticSearch: (Either install it locally or preferably use Docker)
+
+```
+docker run -d -p 127.0.0.1:9200:9200 -p 127.0.0.1:9300:9300 -e "discovery.type=single-node" docker.elastic.co/elasticsearch/elasticsearch:7.17.8
+```
+
 Next, add the Spotify API keys to your environment variables:
 
 ```
